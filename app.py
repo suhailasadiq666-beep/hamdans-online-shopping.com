@@ -88,6 +88,13 @@ if not st.session_state.clear_content:
     st.button("Buy Now", key="toy_nerf",on_click = clearall)
     st.markdown("---")
 
+if not st.session_state.clear_content:
+    st.image("bedsheet.jpg", width=200)
+    st.markdown("### Bedsheet")
+    st.markdown("### ₹850")
+    st.button("Buy Now", key="bedsheet",on_click = clearall)
+    st.markdown("---")
+
 
 
 

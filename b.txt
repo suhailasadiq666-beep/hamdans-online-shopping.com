@@ -1,0 +1,28 @@
+st.title("About Myself")
+st.header("Hamdan")
+st.text("""
+    Hi, My name is Hamdan.
+    I am 11 years old.
+    I like coding with Python.
+    I am studiying in 6th grade.
+    India is my country.
+    My state is Kerala.
+    My city is Ernakulam.
+    In Ernakulam I am in Palluruthy.
+    I am in Dawn Public School.
+    My mother is a Doctor.
+    My father is a Businessman.
+    I am an only child.
+    I love my family.
+    I am living in a rented house.
+    I have a pet Cat.
+    I love to play Cricket.
+    I like to watch minecraft videos on youtube.
+    I have a friend named Mudassir.
+    I love to play with him.
+    I hope you enjoyed reading about me.
+        Thank you! Have a nice day!
+        """)
+
+visitor_details = st.text_input("Write about you if you like to")
+about_visitor = [visitor_details]

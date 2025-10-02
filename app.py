@@ -1,5 +1,6 @@
 import streamlit as st
 import time as tm
+import smtplib
 
 email = "suhailasadiq666@gmail.com"
 reciever_email = "hamdantsadiq@gmail.com"
@@ -105,6 +106,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 

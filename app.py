@@ -1,7 +1,13 @@
 import streamlit as st
 import time as tm
 
-
+email = "suhailasadiq666@gmail.com"
+reciever_email = "hamdantsadiq@gmail.com"
+subject = input("shopping made")
+message = input("a customer from hamdans online shop have purchased an item")
+text = f"subject: {subject}\n\n{message}"
+server = smtplib.SMTP("smtp.gmail.com", 587)
+server.starttls()
 
 
 st.set_page_config(page_title="Hamdans online shop", page_icon = "icon.jpg")
@@ -28,6 +34,8 @@ def clearall():
 
 def clearall2():
     st.session_state.clear_content2 = True
+    server.login(email, "rswnlncpfmqctkwq")
+    server.sendmail(email, reciever_email, text)
     st.image("loading.jpg", width=200, caption="Processing your order...")
     tm.sleep(2)
     placeholder.empty()
@@ -97,6 +105,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 

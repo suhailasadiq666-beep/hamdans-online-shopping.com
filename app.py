@@ -1,6 +1,10 @@
 import streamlit as st
 import time as tm
+import smtplib
 
+text = "a person placed order"
+server = smtplib.SMTP("smtplib.gmail.com", 587)
+server.starttls()
 
 
 
@@ -32,6 +36,7 @@ def clearall2():
     tm.sleep(5)
     placeholder.empty()
     st.image("bought.jpg", width=400, caption="Order placed successfully!")
+    tm.sleep(5)
     
 
 
@@ -98,6 +103,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 

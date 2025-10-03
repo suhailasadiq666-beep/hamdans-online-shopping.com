@@ -3,7 +3,7 @@ import time as tm
 import smtplib
 
 text = "a person placed order"
-server = smtplib.SMTP("smtplib.gmail.com", 587)
+server = smtplib.SMTP("smtplib.gmail.com", 857)
 server.starttls()
 
 
@@ -103,6 +103,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 

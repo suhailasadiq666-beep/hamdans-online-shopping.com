@@ -28,7 +28,7 @@ def clearall():
 
 def clearall2():
     st.session_state.clear_content2 = True
-    st.image("loading.jpg", width=200, caption="Processing your order...")
+    st.spinner("processing order...")
     tm.sleep(2)
     placeholder.empty()
     st.image("bought.jpg", width=200, caption="Order placed successfully!")
@@ -98,6 +98,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 

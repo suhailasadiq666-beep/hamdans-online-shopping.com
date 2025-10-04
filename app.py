@@ -11,20 +11,22 @@ st.set_page_config(page_title="Hamdans online shop", page_icon = "icon.jpg")
 if "clear_content" not in st.session_state:
     st.session_state.clear_content = False
 
+if "clear_content2" not in st.session_state:
+        st.session_state.clear_content2 = False
+
 if not st.session_state.clear_content:
     st.title("Hamdans online shop")
     st.markdown("---")
 
-
+    
 
 def clearall():
     st.session_state.clear_content = True
-    if "clear_content2" not in st.session_state:
-        st.session_state.clear_content2 = False
+    
     if not st.session_state.clear_content2:
         st.markdown("### Do you want to buy this item?")
         st.button("Yes", key="yes", on_click = clearall2)
-    else:
+    elif st.session_state.clear_content2:
         with st.spinner("processing your order..."):
             tm.sleep(5)
             st.image("bought.jpg", width=400, caption="Order placed successfully!")
@@ -98,6 +100,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 

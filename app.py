@@ -42,7 +42,7 @@ if not st.session_state.clear_content:
     st.markdown("###  4 Counters")
     st.markdown("### ₹240")
     st.button("Buy Now", key="counters",on_click = clearall)
-    st.markdown("---"
+    st.markdown("---")
 
     st.image("bata bag.jpeg", width=250)
     st.markdown("### Bata Bag")
@@ -82,6 +82,7 @@ else:
         with st.spinner("processing your order..."):
             tm.sleep(5)
             st.image("bought.jpg", width=400, caption="Order placed successfully!")
+
 
 
 

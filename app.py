@@ -12,10 +12,10 @@ if "clear_content" not in st.session_state:
 if "clear_content2" not in st.session_state:
         st.session_state.clear_content2 = False
 
-def clear_content():
+def clearall():
     st.session_state.clear_content = True
 
-def clear_content2():
+def clearall2():
     st.session_state.clear_content2 = True
 
 
@@ -82,6 +82,7 @@ else:
         with st.spinner("processing your order..."):
             tm.sleep(5)
             st.image("bought.jpg", width=400, caption="Order placed successfully!")
+
 
 
 

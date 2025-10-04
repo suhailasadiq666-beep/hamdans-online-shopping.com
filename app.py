@@ -19,17 +19,22 @@ def clear_content():
 
 def clear_content2():
     st.session_state.clear_content2 = True
-    
-    
 
 
 
 
-
-
-
-    
-
+else:
+    if not st.session_state.clear_content:
+        st.title("Hamdans online shop")
+        st.markdown("---")
+    else:
+        if not st.session_state.clear_content2:
+            st.markdown("### Do you want to buy this item?")
+            st.button("Yes", key="yes", on_click = clearall2)
+        else:
+            with st.spinner("processing your order..."):
+                tm.sleep(5)
+                st.image("bought.jpg", width=400, caption="Order placed successfully!")
 
 
 if not st.session_state.clear_content:
@@ -39,29 +44,12 @@ if not st.session_state.clear_content:
     st.button("Buy Now", key="book",on_click = clearall)
     st.markdown("---")
 
-
-
-if not st.session_state.clear_content:
     st.image("bar magnet.jpeg", width=150)
     st.markdown("### Bar Magnet")
     st.markdown("### ₹150")
     st.button("Buy Now", key="bar_magnet",on_click = clearall)
     st.markdown("---")
-else:
-    if not st.session_state.clear_content:
-    st.title("Hamdans online shop")
-    st.markdown("---")
-else:
-    if not st.session_state.clear_content2:
-        st.markdown("### Do you want to buy this item?")
-        st.button("Yes", key="yes", on_click = clearall2)
-    else:
-        with st.spinner("processing your order..."):
-            tm.sleep(5)
-            st.image("bought.jpg", width=400, caption="Order placed successfully!")
-
-
-if not st.session_state.clear_content:
+    
     st.image("counter.jpeg", width=170) 
     st.markdown("###  4 Counters")
     st.markdown("### ₹240")
@@ -97,6 +85,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 

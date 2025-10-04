@@ -2,8 +2,6 @@ import streamlit as st
 import time as tm
 
 
-
-
 st.set_page_config(page_title="Hamdans online shop", page_icon = "icon.jpg")
 
 
@@ -23,21 +21,11 @@ def clear_content2():
 
 
 
-else:
-    if not st.session_state.clear_content:
-        st.title("Hamdans online shop")
-        st.markdown("---")
-    else:
-        if not st.session_state.clear_content2:
-            st.markdown("### Do you want to buy this item?")
-            st.button("Yes", key="yes", on_click = clearall2)
-        else:
-            with st.spinner("processing your order..."):
-                tm.sleep(5)
-                st.image("bought.jpg", width=400, caption="Order placed successfully!")
-
 
 if not st.session_state.clear_content:
+    st.title("Hamdans online shop")
+    st.markdown("---")
+
     st.image("akbar story.jpg", width=150) 
     st.markdown("### Akbar And Birbal Story Book")  
     st.markdown("### ₹200")
@@ -85,6 +73,15 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
+else:
+    if not st.session_state.clear_content2:
+        st.markdown("### Do you want to buy this item?")
+        st.button("Yes", key="yes", on_click = clearall2)
+    else:
+        with st.spinner("processing your order..."):
+            tm.sleep(5)
+            st.image("bought.jpg", width=400, caption="Order placed successfully!")
 
 
 

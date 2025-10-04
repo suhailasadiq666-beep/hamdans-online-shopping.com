@@ -25,14 +25,15 @@ def clearall():
     if not st.session_state.clear_content2:
         st.markdown("### Do you want to buy this item?")
         st.button("Yes", key="yes", on_click = clearall2)
+    else:
+    with st.spinner("processing your order")
+        tm.sleep(5)
+        tm.sleep(5)
+        st.image("bought.jpg", width=400, caption="Order placed successfully!")
 
 def clearall2():
     st.session_state.clear_content2 = True
-    st.image("loading.jpg", width = 400, caption = "processing order...")
-    tm.sleep(5)
-    placeholder.empty()
-    st.image("bought.jpg", width=400, caption="Order placed successfully!")
-    tm.sleep(5)
+
     
 
 
@@ -99,6 +100,7 @@ if not st.session_state.clear_content:
     st.markdown("### ₹850")
     st.button("Buy Now", key="bedsheet",on_click = clearall)
     st.markdown("---")
+
 
 
 
